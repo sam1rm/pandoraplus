@@ -1,7 +1,7 @@
 import urllib2
 from bs4 import BeautifulSoup
 
-mp3_url = "www.mp3skull.com/mp3/"
+mp3_url = "http://www.mp3skull.com/mp3/"
 
 ## Returns the download link from mp3skull given the information
 ## about the song.

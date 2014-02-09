@@ -9,7 +9,11 @@ def index():
 @app.route('/downloads/', methods=('GET', 'POST'))
 def get_link():
     results = {}
-    if request.method == "GET":
+    print "test"
+    print request.method
+    print "test"
+    if request.method == "POST":
+        print request.json
         client_json = request.json
         results['url'] = scrap(client_json)
     return jsonify(dict=results)
