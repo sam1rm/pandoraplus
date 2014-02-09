@@ -30,8 +30,10 @@ setTimeout(function() { document.getElementsByClassName('thumbUpButton')[0].oncl
             "artist": "",
         }
         $.ajax({
+          type: "POST",
           dataType: "json",
-          url: "http://pandoraplus.herokuapp.com/downloads/",
+          contentType: 'application/json;charset=UTF-8',
+          url: "http://127.0.0.1:5000/downloads/",          
           data: JSON.stringify(data),
           success: function(result) {
             alert(result['url']);
